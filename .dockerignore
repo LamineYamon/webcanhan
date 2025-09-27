@@ -5,9 +5,9 @@ README.md
 Dockerfile
 .dockerignore
 
-# Ignore các thư mục build tạm thời (chỉ giữ target/web-ca-nhan.war)
+# Ignore các thư mục build tạm thời (sẽ build lại trong Docker)
+target/
 build/
-src/
 lib/
 build.xml
 
@@ -22,3 +22,7 @@ build.xml
 # Ignore các file hệ điều hành
 .DS_Store
 Thumbs.db
+
+# Ignore node modules nếu có
+node_modules/
+*.log

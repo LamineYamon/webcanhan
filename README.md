@@ -36,9 +36,15 @@ docker run -p 8080:8080 web-ca-nhan
 2. Tạo Web Service mới trên [Render](https://render.com)
 3. Chọn repository từ GitHub
 4. Cấu hình build settings:
-   - **Build Command**: `mvn clean package`
+   - **Environment**: Docker
+   - **Build Command**: để trống (sử dụng Dockerfile multi-stage build)
    - **Start Command**: để trống (sử dụng Dockerfile)
 5. Deploy và truy cập qua URL được cung cấp
+
+### Giải thích Dockerfile
+
+- **Stage 1**: Build project bằng Maven với JDK 17
+- **Stage 2**: Chạy ứng dụng trên Tomcat với file WAR đã build
 
 ## Cấu trúc project
 

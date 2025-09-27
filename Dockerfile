@@ -1,4 +1,19 @@
-# Sử dụng Tomcat 9 với JDK 17
+# Multi-stage build
+# Stage 1: Build the application
+FROM maven:3.8.6-openjdk-17 AS build
+
+# Set working directory
+WORKDIR /app
+
+# Copy pom.xml and download dependencies
+COPY pom.xml .
+RUN mvn dependency:go-offline -B
+
+# Copy source code and build
+COPY src ./src
+RUN mvn clean package -DskipTests
+
+# Stage 2: Runtime
 FROM tomcat:9.0-jdk17
 
 # Set biến môi trường
@@ -7,8 +22,8 @@ ENV TZ=Asia/Ho_Chi_Minh
 # Xoá các ứng dụng mặc định (ROOT, docs, examples...)
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Copy file WAR của bạn vào Tomcat webapps (đổi tên WAR thành ROOT.war để chạy ở "/")
-COPY target/web-ca-nhan.war /usr/local/tomcat/webapps/ROOT.war
+# Copy file WAR từ build stage vào Tomcat webapps
+COPY --from=build /app/target/web-ca-nhan.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose port
 EXPOSE 8080
