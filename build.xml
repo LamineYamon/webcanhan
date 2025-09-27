@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="web-ca-nhan" default="war" basedir=".">
+    
+    <!-- Project Properties -->
+    <property name="project.name" value="web-ca-nhan"/>
+    <property name="project.version" value="1.0.0"/>
+    
+    <!-- Directory Structure -->
+    <property name="src.dir" value="src/main/java"/>
+    <property name="web.dir" value="src/main/webapp"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="war.dir" value="${build.dir}/war"/>
+    <property name="dist.dir" value="dist"/>
+    
+    <!-- Tomcat Properties -->
+    <property name="tomcat.home" value="D:/Code/Năm 3/ltw/apache-tomcat-9.0.108"/>
+    <property name="tomcat.lib" value="${tomcat.home}/lib"/>
+    <property name="tomcat.webapps" value="${tomcat.home}/webapps"/>
+    
+    <!-- Classpath for compilation -->
+    <path id="compile.classpath">
+        <fileset dir="${tomcat.lib}">
+            <include name="servlet-api.jar"/>
+            <include name="jsp-api.jar"/>
+        </fileset>
+        <fileset dir="${lib.dir}" erroronmissingdir="false">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    
+    <!-- Target: clean - Remove build directories -->
+    <target name="clean" description="Clean build directories">
+        <echo message="Cleaning build directories..."/>
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+        <echo message="Clean completed!"/>
+    </target>
+    
+    <!-- Target: init - Create build directories -->
+    <target name="init" description="Create build directories">
+        <echo message="Initializing build directories..."/>
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${war.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${lib.dir}"/>
+    </target>
+    
+    <!-- Target: setup-libs - Download required libraries -->
+    <target name="setup-libs" depends="init" description="Setup required libraries">
+        <echo message="Setting up required libraries..."/>
+        
+        <!-- Download JSTL if not exists -->
+        <available file="${lib.dir}/jstl-1.2.jar" property="jstl.exists"/>
+        <antcall target="download-jstl"/>
+        
+        <!-- Download Jackson if not exists -->
+        <available file="${lib.dir}/jackson-databind-2.15.2.jar" property="jackson.exists"/>
+        <antcall target="download-jackson"/>
+        
+        <echo message="Libraries setup completed!"/>
+    </target>
+    
+    <!-- Download JSTL -->
+    <target name="download-jstl" unless="jstl.exists">
+        <echo message="Downloading JSTL 1.2..."/>
+        <get src="https://repo1.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.jar" 
+             dest="${lib.dir}/jstl-1.2.jar" 
+             verbose="true"
+             ignoreerrors="true"/>
+    </target>
+    
+    <!-- Download Jackson -->
+    <target name="download-jackson" unless="jackson.exists">
+        <echo message="Downloading Jackson libraries..."/>
+        <get src="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar" 
+             dest="${lib.dir}/jackson-databind-2.15.2.jar" 
+             verbose="true"
+             ignoreerrors="true"/>
+        <get src="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar" 
+             dest="${lib.dir}/jackson-core-2.15.2.jar" 
+             verbose="true"
+             ignoreerrors="true"/>
+        <get src="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar" 
+             dest="${lib.dir}/jackson-annotations-2.15.2.jar" 
+             verbose="true"
+             ignoreerrors="true"/>
+    </target>
+    
+    <!-- Target: compile - Compile Java sources -->
+    <target name="compile" depends="setup-libs" description="Compile Java sources">
+        <echo message="Compiling Java sources..."/>
+        
+        <javac srcdir="${src.dir}" 
+               destdir="${classes.dir}" 
+               classpathref="compile.classpath"
+               includeantruntime="false"
+               encoding="UTF-8"
+               source="11"
+               target="11">
+        </javac>
+        
+        <echo message="Compilation completed!"/>
+    </target>
+    
+    <!-- Target: prepare-war - Prepare WAR structure -->
+    <target name="prepare-war" depends="compile" description="Prepare WAR directory structure">
+        <echo message="Preparing WAR structure..."/>
+        
+        <!-- Copy web resources -->
+        <copy todir="${war.dir}">
+            <fileset dir="${web.dir}"/>
+        </copy>
+        
+        <!-- Copy compiled classes -->
+        <mkdir dir="${war.dir}/WEB-INF/classes"/>
+        <copy todir="${war.dir}/WEB-INF/classes">
+            <fileset dir="${classes.dir}"/>
+        </copy>
+        
+        <!-- Copy required libraries -->
+        <mkdir dir="${war.dir}/WEB-INF/lib"/>
+        <copy todir="${war.dir}/WEB-INF/lib">
+            <fileset dir="${lib.dir}">
+                <include name="jstl-*.jar"/>
+                <include name="jackson-*.jar"/>
+            </fileset>
+        </copy>
+        
+        <echo message="WAR structure prepared!"/>
+    </target>
+    
+    <!-- Target: war - Create WAR file directly in Tomcat webapps -->
+    <target name="war" depends="prepare-war" description="Create WAR file directly in Tomcat webapps">
+        <echo message="Creating WAR file directly in Tomcat webapps..."/>
+        
+        <!-- Create WAR file directly in Tomcat webapps -->
+        <jar jarfile="${tomcat.webapps}/${project.name}.war" basedir="${war.dir}">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Implementation-Title" value="${project.name}"/>
+                <attribute name="Implementation-Version" value="${project.version}"/>
+            </manifest>
+        </jar>
+        
+        <!-- Also create a backup copy in dist folder -->
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${tomcat.webapps}/${project.name}.war" todir="${dist.dir}"/>
+        
+        <echo message="WAR file created: ${tomcat.webapps}/${project.name}.war"/>
+        <echo message="Backup copy: ${dist.dir}/${project.name}.war"/>
+        
+        <!-- Show WAR file size -->
+        <length file="${tomcat.webapps}/${project.name}.war" property="war.size"/>
+        <echo message="WAR file size: ${war.size} bytes"/>
+        <echo message="Ready to start Tomcat!"/>
+        <echo message="Access at: http://localhost:8080/${project.name}/main"/>
+    </target>
+
+</project>

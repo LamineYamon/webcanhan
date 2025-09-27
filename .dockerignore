@@ -1,0 +1,24 @@
+# Ignore các thư mục không cần thiết
+.git
+.gitignore
+README.md
+Dockerfile
+.dockerignore
+
+# Ignore các thư mục build tạm thời (chỉ giữ target/web-ca-nhan.war)
+build/
+src/
+lib/
+build.xml
+
+# Ignore các file IDE
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# Ignore các file hệ điều hành
+.DS_Store
+Thumbs.db
