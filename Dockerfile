@@ -1,6 +1,19 @@
 # Multi-stage build
 # Stage 1: Build the application
-FROM maven:3.9-openjdk-17 AS build
+FROM openjdk:17-jdk-slim AS build
+
+# Install Maven
+RUN apt-get update && \
+    apt-get install -y wget && \
+    wget -O /tmp/maven.tar.gz https://archive.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz && \
+    tar -xzf /tmp/maven.tar.gz -C /opt && \
+    ln -s /opt/apache-maven-3.8.6 /opt/maven && \
+    rm /tmp/maven.tar.gz && \
+    apt-get clean
+
+# Set Maven environment
+ENV MAVEN_HOME=/opt/maven
+ENV PATH=$MAVEN_HOME/bin:$PATH
 
 # Set working directory
 WORKDIR /app
