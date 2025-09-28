@@ -132,12 +132,13 @@
         <echo message="WAR structure prepared!"/>
     </target>
     
-    <!-- Target: war - Create WAR file directly in Tomcat webapps -->
-    <target name="war" depends="prepare-war" description="Create WAR file directly in Tomcat webapps">
-        <echo message="Creating WAR file directly in Tomcat webapps..."/>
+    <!-- Target: war - Create WAR file in dist first, then copy to Tomcat webapps -->
+    <target name="war" depends="prepare-war" description="Create WAR file and deploy to Tomcat webapps">
+        <echo message="Creating WAR file in dist folder first..."/>
         
-        <!-- Create WAR file directly in Tomcat webapps -->
-        <jar jarfile="${tomcat.webapps}/${project.name}.war" basedir="${war.dir}">
+        <!-- Create WAR file in dist folder first -->
+        <mkdir dir="${dist.dir}"/>
+        <jar jarfile="${dist.dir}/${project.name}.war" basedir="${war.dir}">
             <manifest>
                 <attribute name="Built-By" value="${user.name}"/>
                 <attribute name="Implementation-Title" value="${project.name}"/>
@@ -145,9 +146,8 @@
             </manifest>
         </jar>
         
-        <!-- Also create a backup copy in dist folder -->
-        <mkdir dir="${dist.dir}"/>
-        <copy file="${tomcat.webapps}/${project.name}.war" todir="${dist.dir}"/>
+        <!-- Then copy to Tomcat webapps -->
+        <copy file="${dist.dir}/${project.name}.war" todir="${tomcat.webapps}"/>
         
         <echo message="WAR file created: ${tomcat.webapps}/${project.name}.war"/>
         <echo message="Backup copy: ${dist.dir}/${project.name}.war"/>

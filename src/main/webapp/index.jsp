@@ -43,13 +43,12 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Xin chào, tôi là Võ Đức Hoàng</h1>
-                <h2 class="hero-subtitle">Sinh viên ngành Kỹ Thuật Dữ Liệu<br>Trường Đại Học Sư Phạm Kỹ Thuật TPHCM</h2>
+                <h2 class="hero-subtitle">Sinh viên ngành Kỹ Thuật Dữ Liệu<br>Trường Đại Học Sư Phạm Kỹ Thuật TPHCM<br><span class="highlight">MSSV: 23133024</span></h2>
                 <p class="hero-description">
                     Chào mừng đến với website cá nhân của tôi!
                 </p>
                 <div class="hero-buttons">
-                    <a href="portfolio" class="btn btn-primary">Xem dự án</a>
-                    <a href="contact" class="btn btn-secondary">Liên hệ</a>
+                    <a href="portfolio" class="btn btn-primary">Xem bài tập</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -82,6 +81,16 @@
                     <h3>Tools</h3>
                     <p>Maven, Git, IntelliJ IDEA</p>
                 </div>
+                <div class="info-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Hệ điều hành & Mạng máy tính</h3>
+                    <p>Windows, Linux, Networking cơ bản</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Phân tích & Khoa học dữ liệu</h3>
+                    <p>Python (Pandas, NumPy), R, Machine Learning cơ bản, Power BI</p>
+                </div>
             </div>
         </div>
     </section>
@@ -110,11 +119,23 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; <%= java.time.LocalDate.now().getYear() %> Võ Đức Hoàng. All rights reserved.<p>
-            <div class="social-links">
-                <a href="https://github.com/LamineYamon" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.youtube.com/@ucHoangVo-ck7hp" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com/vo.uc.hoang.249116" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+            <p>&copy; <%= java.time.LocalDate.now().getYear() %> Võ Đức Hoàng. All rights reserved.</p>
+            
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="student-info">
+                        <h4>Thông tin sinh viên</h4>
+                        <p><strong>Họ tên:</strong> Võ Đức Hoàng</p>
+                        <p><strong>MSSV:</strong> 23133024</p>
+                        <p><strong>Ngành học:</strong> Kỹ thuật dữ liệu</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/LamineYamon" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/@ucHoangVo-ck7hp" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/vo.uc.hoang.249116" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
             </div>
         </div>
     </footer>

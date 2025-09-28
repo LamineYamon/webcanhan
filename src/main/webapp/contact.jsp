@@ -161,10 +161,22 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; <%= java.time.LocalDate.now().getYear() %> Võ Đức Hoàng. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/LamineYamon" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.youtube.com/@ucHoangVo-ck7hp" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com/vo.uc.hoang.249116" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+            
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="student-info">
+                        <h4>Thông tin sinh viên</h4>
+                        <p><strong>Họ tên:</strong> Võ Đức Hoàng</p>
+                        <p><strong>MSSV:</strong> 23133024</p>
+                        <p><strong>Ngành học:</strong> Kỹ thuật dữ liệu</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/LamineYamon" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/@ucHoangVo-ck7hp" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/vo.uc.hoang.249116" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
             </div>
         </div>
     </footer>
