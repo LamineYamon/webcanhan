@@ -52,17 +52,6 @@
         <url-pattern>/portfolio</url-pattern>
     </servlet-mapping>
 
-    <!-- Contact Servlet -->
-    <servlet>
-        <servlet-name>ContactController</servlet-name>
-        <servlet-class>com.personal.servlet.ContactController</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ContactController</servlet-name>
-        <url-pattern>/contact</url-pattern>
-    </servlet-mapping>
-
     <!-- Session Configuration -->
     <session-config>
         <session-timeout>30</session-timeout>

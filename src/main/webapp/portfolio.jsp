@@ -26,9 +26,6 @@
                 <li class="nav-item">
                     <a href="portfolio" class="nav-link active">Bài tập</a>
                 </li>
-                <li class="nav-item">
-                    <a href="contact" class="nav-link">Liên hệ</a>
-                </li>
             </ul>
             <div class="nav-toggle" id="mobile-menu">
                 <span class="bar"></span>
