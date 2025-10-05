@@ -1,5 +1,51 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c"                <!-- Bài tập 6.1 -->
+                <div class="assignment-item">
+                              <!-- Bài tập                 <!-- Bài tập                <!-- Bài tập 11 -->
+                <div class="assignment-item">
+                    <h3 class="assignment-title">
+                        <i class="fas fa-folder-open"></i>
+                        Bài tập 11
+                    </h3>
+                    <div class="assignment-links">
+                        <a href="https://duchoang9-1.onrender.com/ch09_ex1_download/" class="assignment-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Xem bài tập
+                        </a>
+                    </div>
+                </div>          <div class="assignment-item">
+                    <h3 class="assignment-title">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        Bài tập 9.2
+                    </h3>
+                    <div class="assignment-links">
+                        <a href="https://duchoang9-2.onrender.com/" class="assignment-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Xem bài tập
+                        </a>
+                    </div>
+                </div>         <div class="assignment-item">
+                    <h3 class="assignment-title">
+                        <i class="fas fa-download"></i>
+                        Bài tập 9.1
+                    </h3>
+                    <div class="assignment-links">
+                        <a href="https://duchoang9-1.onrender.com/ch09_ex1_download/" class="assignment-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Xem bài tập
+                        </a>
+                    </div>
+                </div>"assignment-title">
+                        <i class="fas fa-list"></i>
+                        Bài tập 6.1
+                    </h3>
+                    <div class="assignment-links">
+                        <a href="https://duchoang6-1.onrender.com/emailList" class="assignment-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Xem bài tập
+                        </a>
+                    </div>
+                </div>a.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -49,15 +95,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-globe"></i>
-                        Bài tập 2: Web cơ bản
+                        Bài tập 2
                     </h3>
-                    <p class="assignment-description">
-                        Trang web cơ bản đầu tiên, thực hành HTML/CSS và triển khai lên Render.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang2.onrender.com/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -65,15 +108,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-envelope"></i>
-                        Bài tập 3: Email Survey
+                        Bài tập 3
                     </h3>
-                    <p class="assignment-description">
-                        Ứng dụng khảo sát qua email với giao diện thân thiện và tính năng thu thập phản hồi người dùng.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang-servey.onrender.com/Email/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -82,15 +122,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-code"></i>
-                        Bài tập 4: Web Application
+                        Bài tập 4
                     </h3>
-                    <p class="assignment-description">
-                        Ứng dụng web đa chức năng sử dụng các công nghệ web hiện đại để giải quyết bài toán thực tế.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoangbai4.onrender.com" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -116,15 +153,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-database"></i>
-                        Bài tập 6.2: Database Integration
+                        Bài tập 6.2
                     </h3>
-                    <p class="assignment-description">
-                        Ứng dụng tích hợp cơ sở dữ liệu với các thao tác CRUD cơ bản và giao diện người dùng trực quan.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang6-2.onrender.com/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -133,15 +167,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-shopping-cart"></i>
-                        Bài tập 7.1: E-commerce Features
+                        Bài tập 7.1
                     </h3>
-                    <p class="assignment-description">
-                        Phát triển các tính năng thương mại điện tử cơ bản với giỏ hàng và xử lý đơn hàng.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang7-1-2.onrender.com/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -150,15 +181,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-user-circle"></i>
-                        Bài tập 7.2: User Management System
+                        Bài tập 7.2
                     </h3>
-                    <p class="assignment-description">
-                        Hệ thống quản lý người dùng với authentication, authorization và profile management.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang7.onrender.com/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -167,15 +195,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-chart-line"></i>
-                        Bài tập 7.3: Advanced Web Application
+                        Bài tập 7.3
                     </h3>
-                    <p class="assignment-description">
-                        Ứng dụng web nâng cao với tính năng phân tích dữ liệu và báo cáo thống kê trực quan.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoangbai7.onrender.com/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -184,15 +209,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-cogs"></i>
-                        Bài tập 8: System Integration
+                        Bài tập 8
                     </h3>
-                    <p class="assignment-description">
-                        Tích hợp hệ thống với các API bên ngoài và xử lý dữ liệu đa dạng từ nhiều nguồn khác nhau.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoangbai8.onrender.com/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -252,15 +274,26 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-project-diagram"></i>
-                        Bài tập 12: SQLGateway
+                        Bài tập 12
                     </h3>
-                    <p class="assignment-description">
-                        Thực hành với SQL
-                    </p>
                     <div class="assignment-links">
                         <a href="https://bai12-1-qr7h.onrender.com/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bài tập 13 -->
+                <div class="assignment-item">
+                    <h3 class="assignment-title">
+                        <i class="fas fa-rocket"></i>
+                        Bài tập 13
+                    </h3>
+                    <div class="assignment-links">
+                        <a href="https://duchoangbai13-1.onrender.com/" class="assignment-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
