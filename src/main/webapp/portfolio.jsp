@@ -1,51 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c"                <!-- Bài tập 6.1 -->
-                <div class="assignment-item">
-                              <!-- Bài tập                 <!-- Bài tập                <!-- Bài tập 11 -->
-                <div class="assignment-item">
-                    <h3 class="assignment-title">
-                        <i class="fas fa-folder-open"></i>
-                        Bài tập 11
-                    </h3>
-                    <div class="assignment-links">
-                        <a href="https://duchoang9-1.onrender.com/ch09_ex1_download/" class="assignment-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            Xem bài tập
-                        </a>
-                    </div>
-                </div>          <div class="assignment-item">
-                    <h3 class="assignment-title">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        Bài tập 9.2
-                    </h3>
-                    <div class="assignment-links">
-                        <a href="https://duchoang9-2.onrender.com/" class="assignment-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            Xem bài tập
-                        </a>
-                    </div>
-                </div>         <div class="assignment-item">
-                    <h3 class="assignment-title">
-                        <i class="fas fa-download"></i>
-                        Bài tập 9.1
-                    </h3>
-                    <div class="assignment-links">
-                        <a href="https://duchoang9-1.onrender.com/ch09_ex1_download/" class="assignment-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            Xem bài tập
-                        </a>
-                    </div>
-                </div>"assignment-title">
-                        <i class="fas fa-list"></i>
-                        Bài tập 6.1
-                    </h3>
-                    <div class="assignment-links">
-                        <a href="https://duchoang6-1.onrender.com/emailList" class="assignment-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            Xem bài tập
-                        </a>
-                    </div>
-                </div>a.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -104,6 +58,7 @@
                         </a>
                     </div>
                 </div>
+
                 <!-- Bài tập 3 -->
                 <div class="assignment-item">
                     <h3 class="assignment-title">
@@ -136,15 +91,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-list"></i>
-                        Bài tập 6.1: Email List Management
+                        Bài tập 6.1
                     </h3>
-                    <p class="assignment-description">
-                        Hệ thống quản lý danh sách email với các chức năng thêm, sửa, xóa và tìm kiếm thông tin người dùng.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang6-1.onrender.com/emailList" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -223,15 +175,12 @@
                 <div class="assignment-item">
                     <h3 class="assignment-title">
                         <i class="fas fa-download"></i>
-                        Bài tập 9.1: File Download System
+                        Bài tập 9.1
                     </h3>
-                    <p class="assignment-description">
-                        Hệ thống download file với quản lý quyền truy cập và theo dõi lượt tải xuống.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang9-1.onrender.com/ch09_ex1_download/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
@@ -239,33 +188,27 @@
                 <!-- Bài tập 9.2 -->
                 <div class="assignment-item">
                     <h3 class="assignment-title">
-                        <i class="fas fa-upload"></i>
-                        Bài tập 9.2: File Upload & Processing
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        Bài tập 9.2
                     </h3>
-                    <p class="assignment-description">
-                        Ứng dụng upload và xử lý file với validation, compression và storage management.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang9-2.onrender.com/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
 
-                <!-- Bài tập 9.3 -->
+                <!-- Bài tập 11 -->
                 <div class="assignment-item">
                     <h3 class="assignment-title">
-                        <i class="fas fa-file-alt"></i>
-                        Bài tập 9.3: Advanced File Management
+                        <i class="fas fa-folder-open"></i>
+                        Bài tập 11
                     </h3>
-                    <p class="assignment-description">
-                        Hệ thống quản lý file nâng cao với tính năng preview, share và version control.
-                    </p>
                     <div class="assignment-links">
                         <a href="https://duchoang9-1.onrender.com/ch09_ex1_download/" class="assignment-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
-                            Xem Demo
+                            Xem bài tập
                         </a>
                     </div>
                 </div>
