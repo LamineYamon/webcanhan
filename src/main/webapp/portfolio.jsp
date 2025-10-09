@@ -240,6 +240,20 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Bài tập 14 -->
+                <div class="assignment-item">
+                    <h3 class="assignment-title">
+                        <i class="fas fa-star"></i>
+                        Bài tập 14
+                    </h3>
+                    <div class="assignment-links">
+                        <a href="https://duchoangchap14.onrender.com/" class="assignment-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Xem bài tập
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
